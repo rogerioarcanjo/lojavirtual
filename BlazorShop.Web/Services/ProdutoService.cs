@@ -59,4 +59,56 @@ public class ProdutoService : IProdutoService
         }
     }
 
+    public async Task<IEnumerable<CategoriaDto>> GetCategorias()
+    {
+        try
+        {
+            var response = await _httpClient.GetAsync("api/Produtos/GetCategorias");
+            if (response.IsSuccessStatusCode)
+            {
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return Enumerable.Empty<CategoriaDto>();
+                }
+                return await response.Content.ReadFromJsonAsync<IEnumerable<CategoriaDto>>();
+            }
+            else
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Http Status Code - {response.StatusCode} Message - {message}");
+            }
+        }
+        catch (Exception)
+        {
+            //log exception
+            throw;
+        }
+    }
+
+    public async Task<IEnumerable<ProdutoDto>> GetItensPorCategoria(int categoriaId)
+    {
+        try
+        {
+            var response = await _httpClient.GetAsync($"api/Produtos/{categoriaId}/GetItensPorCategoria");
+            
+            if (response.IsSuccessStatusCode)
+            {
+                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                {
+                    return Enumerable.Empty<ProdutoDto>();
+                }
+                return await response.Content.ReadFromJsonAsync<IEnumerable<ProdutoDto>>();
+            }
+            else
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Http Status Code - {response.StatusCode} Message - {message}");
+            }
+        }
+        catch (Exception)
+        {
+            //log exception
+            throw;
+        }
+    }
 }

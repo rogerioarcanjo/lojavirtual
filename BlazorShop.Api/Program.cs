@@ -14,16 +14,13 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors();
 
-
-
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-
 });
 
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
-
+builder.Services.AddScoped<ICarrinhoCompraRepository, CarrinhoCompraRepository>();
 
 var app = builder.Build();
 
@@ -34,9 +31,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
 app.UseCors(policy =>
-     policy.WithOrigins("http://localhost:7023", "https://localhost:7023")
+    policy.WithOrigins("http://localhost:7023", "https://localhost:7023")
     .AllowAnyMethod()
     .AllowAnyHeader()
     .WithHeaders(HeaderNames.ContentType)

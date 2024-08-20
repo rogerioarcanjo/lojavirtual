@@ -1,11 +1,10 @@
-﻿namespace BlazorShop.Api.Entities
-{
-    public class Carrinho
-    {
-        public int Id { get; set; }
-        public int UsuarioId {  get; set; }
+﻿namespace BlazorShop.Api.Entities;
 
-        public ICollection<CarrinhoItem> Itens { get; set; } 
-            = new List<CarrinhoItem>();
-    }
+public class Carrinho
+{
+    public int Id { get; set; }
+    public string UsuarioId { get; set; }
+
+    public ICollection<CarrinhoItem> Itens { get; set; } =
+        new List<CarrinhoItem>();
 }

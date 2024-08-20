@@ -1,5 +1,4 @@
-﻿
-using BlazorShop.Api.Context;
+﻿using BlazorShop.Api.Context;
 using BlazorShop.Api.Entities;
 using Microsoft.EntityFrameworkCore;
 

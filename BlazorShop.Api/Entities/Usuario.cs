@@ -1,15 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorShop.Api.Entities
+namespace BlazorShop.Api.Entities;
+
+public class Usuario
 {
-    public class Usuario
-    {
-        public int Id { get; set; }
+    public int Id { get; set; }
+    [MaxLength(100)]
+    public string NomeUsuario { get; set; } = string.Empty;
 
-        [MaxLength(100)]
-        public string NomeUsuario { get; set; }
-
-        public Carrinho? Carrinho { get; set; } 
-
-    }
+    public Carrinho? Carrinho { get; set; }
 }

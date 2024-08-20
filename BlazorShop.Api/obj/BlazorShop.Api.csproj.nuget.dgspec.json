@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BlazorShop\\BlazorShop\\BlazorShop.Api\\BlazorShop.Api.csproj": {}
+    "C:\\loja\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj": {}
   },
   "projects": {
-    "C:\\BlazorShop\\BlazorShop\\BlazorShop.Api\\BlazorShop.Api.csproj": {
+    "C:\\loja\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BlazorShop\\BlazorShop\\BlazorShop.Api\\BlazorShop.Api.csproj",
+        "projectUniqueName": "C:\\loja\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj",
         "projectName": "BlazorShop.Api",
-        "projectPath": "C:\\BlazorShop\\BlazorShop\\BlazorShop.Api\\BlazorShop.Api.csproj",
+        "projectPath": "C:\\loja\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj",
         "packagesPath": "C:\\Users\\Arcanjo\\.nuget\\packages\\",
-        "outputPath": "C:\\BlazorShop\\BlazorShop\\BlazorShop.Api\\obj\\",
+        "outputPath": "C:\\loja\\lojavirtual\\BlazorShop.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,11 +30,11 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\BlazorShop\\BlazorShop\\BlazorShop.Models\\BlazorShop.Models.csproj": {
-                "projectPath": "C:\\BlazorShop\\BlazorShop\\BlazorShop.Models\\BlazorShop.Models.csproj"
+              "C:\\loja\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
+                "projectPath": "C:\\loja\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj"
               }
             }
           }
@@ -51,22 +51,22 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[6.0.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[6.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.2.3, )"
             }
           },
           "imports": [
@@ -88,18 +88,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\BlazorShop\\BlazorShop\\BlazorShop.Models\\BlazorShop.Models.csproj": {
+    "C:\\loja\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BlazorShop\\BlazorShop\\BlazorShop.Models\\BlazorShop.Models.csproj",
+        "projectUniqueName": "C:\\loja\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj",
         "projectName": "BlazorShop.Models",
-        "projectPath": "C:\\BlazorShop\\BlazorShop\\BlazorShop.Models\\BlazorShop.Models.csproj",
+        "projectPath": "C:\\loja\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj",
         "packagesPath": "C:\\Users\\Arcanjo\\.nuget\\packages\\",
-        "outputPath": "C:\\BlazorShop\\BlazorShop\\BlazorShop.Models\\obj\\",
+        "outputPath": "C:\\loja\\lojavirtual\\BlazorShop.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -110,7 +110,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -118,8 +118,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -135,8 +135,8 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -153,7 +153,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

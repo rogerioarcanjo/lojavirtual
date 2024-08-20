@@ -16,10 +16,10 @@ namespace BlazorShop.Api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("ProductVersion", "6.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("BlazorShop.Api.Entities.Carrinho", b =>
                 {
@@ -27,7 +27,7 @@ namespace BlazorShop.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("UsuarioId")
                         .HasColumnType("int");
@@ -58,7 +58,7 @@ namespace BlazorShop.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CarrinhoId")
                         .HasColumnType("int");
@@ -84,7 +84,7 @@ namespace BlazorShop.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("IconCSS")
                         .IsRequired()
@@ -132,7 +132,7 @@ namespace BlazorShop.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("CategoriaId")
                         .HasColumnType("int");
@@ -153,7 +153,7 @@ namespace BlazorShop.Api.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<decimal>("Preco")
-                        .HasColumnType("decimal('10,2)");
+                        .HasColumnType("decimal(10,2)");
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
@@ -403,7 +403,7 @@ namespace BlazorShop.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("NomeUsuario")
                         .IsRequired()
@@ -444,7 +444,7 @@ namespace BlazorShop.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BlazorShop.Api.Entities.Produto", "produto")
+                    b.HasOne("BlazorShop.Api.Entities.Produto", "Produto")
                         .WithMany("Itens")
                         .HasForeignKey("ProdutoId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -452,7 +452,7 @@ namespace BlazorShop.Api.Migrations
 
                     b.Navigation("Carrinho");
 
-                    b.Navigation("produto");
+                    b.Navigation("Produto");
                 });
 
             modelBuilder.Entity("BlazorShop.Api.Entities.Produto", b =>
