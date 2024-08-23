@@ -1,0 +1,74 @@
+﻿@page "/login"
+@using System.Net.Http.Json
+@using System.Net
+@using System.ComponentModel.DataAnnotations
+@inject HttpClient HttpClient
+@inject NavigationManager Navigation
+
+<h3>Login</h3>
+
+<EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label for="username">Username</label>
+        <InputText id="username" @bind-Value="loginModel.UserName" />
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <InputText id="password" @bind-Value="loginModel.Password" type="password" />
+    </div>
+
+    <button type="submit">Login</button>
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger mt-2">
+            @errorMessage
+        </div>
+    }
+</EditForm>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+    private string errorMessage;
+
+    private async Task HandleLogin()
+    {
+        try
+        {
+            var response = await HttpClient.PostAsJsonAsync("api/identity/login", loginModel);
+
+            if (response.IsSuccessStatusCode)
+            {
+                // Se o login for bem-sucedido, navegue para a página inicial ou outra página
+                Navigation.NavigateTo("/");
+            }
+            else
+            {
+                var errorResponse = await response.Content.ReadFromJsonAsync<ErrorResponse>();
+                errorMessage = errorResponse?.Message ?? "Login failed. Please check your username and password.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred during login. Please try again.";
+        }
+    }
+
+    public class LoginModel
+    {
+        [Required]
+        public string UserName { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+    }
+
+    public class ErrorResponse
+    {
+        public string Message { get; set; }
+    }
+}

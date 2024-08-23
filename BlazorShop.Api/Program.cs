@@ -1,23 +1,28 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using BlazorShop.Api.Context;
 using BlazorShop.Api.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors();
 
+// Configure DbContexts
 builder.Services.AddDbContext<AppDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<AppDbContextIdentity>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Configure Identity
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContextIdentity>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ICarrinhoCompraRepository, CarrinhoCompraRepository>();
@@ -40,6 +45,7 @@ app.UseCors(policy =>
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication(); // Ensure authentication is used
 app.UseAuthorization();
 
 app.MapControllers();
