@@ -6227,23 +6227,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Arcanjo\\.nuget\\packages\\": {},
+    "C:\\Users\\toshio.ws\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\loja\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj",
+      "projectUniqueName": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj",
       "projectName": "BlazorShop.Api",
-      "projectPath": "C:\\loja\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj",
-      "packagesPath": "C:\\Users\\Arcanjo\\.nuget\\packages\\",
-      "outputPath": "C:\\loja\\lojavirtual\\BlazorShop.Api\\obj\\",
+      "projectPath": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Api\\BlazorShop.Api.csproj",
+      "packagesPath": "C:\\Users\\toshio.ws\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Arcanjo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\toshio.ws\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -6259,8 +6259,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\loja\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
-              "projectPath": "C:\\loja\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj"
+            "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
+              "projectPath": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj"
             }
           }
         }
@@ -6334,7 +6334,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
