@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlazorShop.Models
-build_property.ProjectDir = C:\loja\lojavirtual\BlazorShop.Models\
+build_property.ProjectDir = C:\Users\toshio.ws\Desktop\lojavirtual\BlazorShop.Models\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
