@@ -1,0 +1,43 @@
+﻿@inject UsuarioService UsuarioService
+
+@if (isLoading)
+{
+    <ExibirSpinner />
+}
+else if (Usuario != null)
+{
+    <a href="Login" class="btn btn-info">
+        <i class="oi oi-person"></i>&nbsp;Usuário
+        <span class="badge bg-dark"></span>
+        <div>@Usuario.UserName</div>
+    </a>
+}
+else
+{
+    <a href="Login" class="btn btn-info">
+        <i class="oi oi-person"></i>&nbsp;Faça o login
+        <span class="badge bg-dark"></span>
+    </a>
+}
+
+@code {
+    private bool isLoading = true; // Estado para indicar se os dados estão sendo carregados
+    public UserDto? Usuario { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            Usuario = await UsuarioService.GetUsuario();
+        }
+        catch (Exception ex)
+        {
+            // Log de erro opcional, pode ser substituído por um serviço de notificação ou similar
+            Console.WriteLine($"Erro ao carregar o usuário: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false; // Define isLoading como false independentemente do sucesso ou falha na operação
+        }
+    }
+}

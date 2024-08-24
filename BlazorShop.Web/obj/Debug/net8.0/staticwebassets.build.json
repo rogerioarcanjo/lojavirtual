@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "O1ov7AwlaPSlN8Oy/T1McB/ezNeaiH4X0UZaFs1wAEo=",
+  "Hash": "xnrsPMAnkBXLZtwdwwHM2yGc6kGeyoH0fc+fpyb/xKk=",
   "Source": "BlazorShop.Web",
   "BasePath": "/",
   "Mode": "Root",
@@ -281,6 +281,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Program Files\\dotnet\\packs\\Microsoft.NETCore.App.Runtime.Mono.browser-wasm\\8.0.3\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\FluentAssertions.wasm",
+      "SourceId": "BlazorShop.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentAssertions.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\webcil\\FluentAssertions.wasm"
     },
     {
       "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
@@ -1649,6 +1668,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\webcil\\System.ComponentModel.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.ConfigurationManager.wasm",
+      "SourceId": "BlazorShop.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Configuration.ConfigurationManager.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\webcil\\System.Configuration.ConfigurationManager.wasm"
     },
     {
       "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.wasm",
@@ -3739,6 +3777,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\webcil\\System.Security.Cryptography.Primitives.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.ProtectedData.wasm",
+      "SourceId": "BlazorShop.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.ProtectedData.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\webcil\\System.Security.Cryptography.ProtectedData.wasm"
     },
     {
       "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.wasm",
@@ -6078,6 +6135,25 @@
       "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Core.wasm"
     },
     {
+      "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\compressed\\cc6w868y7v.gz",
+      "SourceId": "BlazorShop.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Configuration.ConfigurationManager.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.ConfigurationManager.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.ConfigurationManager.wasm"
+    },
+    {
       "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\compressed\\cvqo5wwfdx.gz",
       "SourceId": "BlazorShop.Web",
       "SourceType": "Computed",
@@ -7541,6 +7617,25 @@
       "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.wasm"
     },
     {
+      "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\compressed\\nh9yexye9v.gz",
+      "SourceId": "BlazorShop.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentAssertions.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\FluentAssertions.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\FluentAssertions.wasm"
+    },
+    {
       "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\compressed\\nk1euqejwm.gz",
       "SourceId": "BlazorShop.Web",
       "SourceType": "Computed",
@@ -7767,6 +7862,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IdentityModel.Tokens.Jwt.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\compressed\\q19iy8m71m.gz",
+      "SourceId": "BlazorShop.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.ProtectedData.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.ProtectedData.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.ProtectedData.wasm"
     },
     {
       "Identity": "C:\\Users\\toshio.ws\\Desktop\\lojavirtual\\BlazorShop.Web\\obj\\Debug\\net8.0\\compressed\\q7c5lu29fr.gz",

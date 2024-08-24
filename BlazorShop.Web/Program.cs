@@ -5,6 +5,7 @@ using BlazorShop.Web.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.AspNetCore.Components.Authorization;
+using FluentAssertions.Common;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -28,5 +29,7 @@ builder.Services.AddAuthorizationCore(); // Adiciona suporte à autorização
 
 builder.Services.AddScoped<CustomAuthenticationStateProvider>();
 builder.Services.AddScoped<AuthenticationStateProvider>(sp => sp.GetRequiredService<CustomAuthenticationStateProvider>());
+
+builder.Services.AddScoped<UsuarioService>();
 
 await builder.Build().RunAsync();

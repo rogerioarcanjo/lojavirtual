@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Net.Http.Headers;
 using BlazorShop.Api.Context;
 using BlazorShop.Api.Repositories;
-using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddCors();
+// Configure CORS with a named policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins", policy =>
+    {
+        policy.WithOrigins("http://localhost:7023", "https://localhost:7023")
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .WithExposedHeaders(HeaderNames.ContentType);
+    });
+});
 
 // Configure DbContexts
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -20,10 +30,25 @@ builder.Services.AddDbContext<AppDbContextIdentity>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Configure Identity
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
+
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.AllowedForNewUsers = true;
+
+    options.User.RequireUniqueEmail = true;
+})
     .AddEntityFrameworkStores<AppDbContextIdentity>()
     .AddDefaultTokenProviders();
 
+// Register application services
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<ICarrinhoCompraRepository, CarrinhoCompraRepository>();
 
@@ -36,12 +61,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(policy =>
-    policy.WithOrigins("http://localhost:7023", "https://localhost:7023")
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    .WithHeaders(HeaderNames.ContentType)
-);
+app.UseCors("AllowSpecificOrigins");
 
 app.UseHttpsRedirection();
 
