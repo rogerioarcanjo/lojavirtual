@@ -83,4 +83,12 @@ public static class MappingDtos
             PrecoTotal = produto.Preco * carrinhoItem.Quantidade
         };
     }
+
+    public static UserDto ConverterUserParaDto(this Usuario usuario)
+    {
+        return new UserDto
+        {
+            UserName = usuario.NomeUsuario
+        };
+    }
 }

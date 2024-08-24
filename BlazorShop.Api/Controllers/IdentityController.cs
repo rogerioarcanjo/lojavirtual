@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using BlazorShop.Models.DTOs;
 using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
-
+using System;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace BlazorShop.Api.Controllers
 {
@@ -15,12 +15,14 @@ namespace BlazorShop.Api.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<IdentityController> _logger;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public IdentityController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, ILogger<IdentityController> logger)
+        public IdentityController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, ILogger<IdentityController> logger, IHttpContextAccessor httpContextAccessor)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [HttpPost("login")]
@@ -77,6 +79,36 @@ namespace BlazorShop.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError("## Erro ao registrar o usuário", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+
+        [HttpGet("current-user")]
+        public async Task<IActionResult> GetCurrentUserAsync()
+        {
+            try
+            {
+                // Obtém o usuário atual usando o UserManager
+                var user = await _userManager.GetUserAsync(User);
+
+                if (user == null)
+                {
+                    // Retorna um status de Unauthorized se o usuário não estiver autenticado
+                    return Unauthorized(new { Message = "User is not authenticated" });
+                }
+
+                // Retorna informações do usuário. Você pode adicionar mais propriedades se desejar.
+                return Ok(new
+                {
+                    UserName = user.UserName  // Retorna o nome de usuário        // Retorna o e-mail do usuário
+                                               // Adicione outras propriedades conforme necessário
+                });
+            }
+            catch (Exception ex)
+            {
+                // Loga o erro e retorna uma resposta de erro do servidor
+                _logger.LogError("## Error while retrieving current user", ex);
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
