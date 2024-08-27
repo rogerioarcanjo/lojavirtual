@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\loja\\lojavirtual\\lojavirtual\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.web\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.web\\authentication\\jwtparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\authentication\\jwtparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.web\\authentication\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\authentication\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|solutionrelative:blazorshop.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Shared\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Shared\\NavMenu.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Shared\\NavMenu.razor",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAuwGUAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-27T19:43:04.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JwtParser.cs",
+              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\JwtParser.cs",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Authentication\\JwtParser.cs",
+              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\JwtParser.cs",
+              "RelativeToolTip": "BlazorShop.Web\\Authentication\\JwtParser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T19:24:12.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomAuthenticationStateProvider.cs",
+              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
+              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
+              "RelativeToolTip": "BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T19:23:42.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdentityController.cs",
+              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "RelativeDocumentMoniker": "BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "RelativeToolTip": "BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "ViewState": "AQIAAJQAAAAAAAAAAAAAAK4AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T19:23:05.744Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

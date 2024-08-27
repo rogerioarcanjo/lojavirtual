@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/7KVR540q6ZGlpcy3g0csFSKXndhe9oMpzlxI/qG+IE=",
+  "Hash": "EMmj5QfbRQ0nSg2R9RwV42/2ju0I9+8l0PvPpweyvGM=",
   "Source": "BlazorShop.Api",
   "BasePath": "_content/BlazorShop.Api",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "C:\\Users\\toshio.ws\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\AuthenticationService.js",
+      "Identity": "C:\\Users\\Arcanjo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\AuthenticationService.js",
       "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\toshio.ws\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Arcanjo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
       "RelativePath": "AuthenticationService.js",
       "AssetKind": "All",
@@ -25,7 +25,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\toshio.ws\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\AuthenticationService.js"
+      "OriginalItemSpec": "C:\\Users\\Arcanjo\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\AuthenticationService.js"
     }
   ]
 }

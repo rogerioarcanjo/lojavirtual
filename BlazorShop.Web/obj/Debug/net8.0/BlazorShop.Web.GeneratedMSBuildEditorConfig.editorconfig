@@ -13,83 +13,83 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = BlazorShop.Web
 build_property.RootNamespace = BlazorShop.Web
-build_property.ProjectDir = C:\Users\toshio.ws\Desktop\lojavirtual\BlazorShop.Web\
+build_property.ProjectDir = C:\loja\lojavirtual\lojavirtual\BlazorShop.Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\toshio.ws\Desktop\lojavirtual\BlazorShop.Web
+build_property.MSBuildProjectDirectory = C:\loja\lojavirtual\lojavirtual\BlazorShop.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/App.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/Catalogo.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/Catalogo.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ28ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/Index.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/Login.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/ProdutoDetalhes.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/ProdutoDetalhes.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b0RldGFsaGVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/ProdutosPorCategoria.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/ProdutosPorCategoria.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b3NQb3JDYXRlZ29yaWEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/Register.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/ResumoPedido.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/ResumoPedido.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzdW1vUGVkaWRvLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Shared/CarrinhoMenu.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Shared/CarrinhoMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENhcnJpbmhvTWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Shared/ExibirErro.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Shared/ExibirErro.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4aWJpckVycm8ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Shared/ExibirSpinner.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Shared/ExibirSpinner.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEV4aWJpclNwaW5uZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Shared/LoginUsuario.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Shared/LoginUsuario.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luVXN1YXJpby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/_Imports.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/CarrinhoCompra.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/CarrinhoCompra.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FycmluaG9Db21wcmEucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-f1947q9pob
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Pages/ExibirProdutos.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Pages/ExibirProdutos.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhpYmlyUHJvZHV0b3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-f7y58quhxa
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Shared/MainLayout.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-n6rmdi0owa
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Shared/NavMenu.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-qew11agi9f
 
-[C:/Users/toshio.ws/Desktop/lojavirtual/BlazorShop.Web/Shared/ProdutosCategoriaNavMenu.razor]
+[C:/loja/lojavirtual/lojavirtual/BlazorShop.Web/Shared/ProdutosCategoriaNavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFByb2R1dG9zQ2F0ZWdvcmlhTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-j9qaxtzgo8

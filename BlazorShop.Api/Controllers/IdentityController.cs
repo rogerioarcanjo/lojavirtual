@@ -2,8 +2,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace BlazorShop.Api.Controllers
@@ -16,13 +20,20 @@ namespace BlazorShop.Api.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<IdentityController> _logger;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IConfiguration _configuration;
 
-        public IdentityController(SignInManager<IdentityUser> signInManager, UserManager<IdentityUser> userManager, ILogger<IdentityController> logger, IHttpContextAccessor httpContextAccessor)
+        public IdentityController(
+            SignInManager<IdentityUser> signInManager,
+            UserManager<IdentityUser> userManager,
+            ILogger<IdentityController> logger,
+            IHttpContextAccessor httpContextAccessor,
+            IConfiguration configuration)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _logger = logger;
             _httpContextAccessor = httpContextAccessor;
+            _configuration = configuration;
         }
 
         [HttpPost("login")]
@@ -35,12 +46,21 @@ namespace BlazorShop.Api.Controllers
 
             try
             {
-                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, isPersistent: false, lockoutOnFailure: false);
+                var user = await _userManager.FindByNameAsync(model.UserName);
+                if (user == null)
+                {
+                    return Unauthorized(new { Message = "Invalid login attempt" });
+                }
+
+                var result = await _signInManager.CheckPasswordSignInAsync(user, model.Password, lockoutOnFailure: false);
 
                 if (result.Succeeded)
                 {
-                    // Retorne um token JWT ou algum outro tipo de resposta
-                    return Ok(new { Message = "Login successful" });
+                    // Gerar um token JWT
+                    var token = GenerateJwtToken(user);
+                    var userName = user.UserName;
+
+                    return Ok(new { Token = token, UserName = userName });
                 }
                 else
                 {
@@ -83,34 +103,88 @@ namespace BlazorShop.Api.Controllers
             }
         }
 
-
         [HttpGet("current-user")]
         public async Task<IActionResult> GetCurrentUserAsync()
         {
             try
             {
-                // Obtém o usuário atual usando o UserManager
-                var user = await _userManager.GetUserAsync(User);
+                var token = _httpContextAccessor.HttpContext?.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+
+                if (string.IsNullOrEmpty(token))
+                {
+                    return Unauthorized(new { Message = "No token provided" });
+                }
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
+
+                var validationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = _configuration["Jwt:Issuer"],
+                    ValidAudience = _configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+
+                SecurityToken validatedToken;
+                var principal = tokenHandler.ValidateToken(token, validationParameters, out validatedToken);
+
+                if (principal == null)
+                {
+                    return Unauthorized(new { Message = "Invalid token" });
+                }
+
+                var userIdClaim = principal.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.NameIdentifier);
+                var userNameClaim = principal.Claims.FirstOrDefault(claim => claim.Type == JwtRegisteredClaimNames.Sub);
+
+                if (userIdClaim == null || userNameClaim == null)
+                {
+                    return Unauthorized(new { Message = "Invalid token" });
+                }
+
+                var user = await _userManager.FindByIdAsync(userIdClaim.Value);
 
                 if (user == null)
                 {
-                    // Retorna um status de Unauthorized se o usuário não estiver autenticado
-                    return Unauthorized(new { Message = "User is not authenticated" });
+                    return Unauthorized(new { Message = "User not found" });
                 }
 
-                // Retorna informações do usuário. Você pode adicionar mais propriedades se desejar.
                 return Ok(new
                 {
-                    UserName = user.UserName  // Retorna o nome de usuário        // Retorna o e-mail do usuário
-                                               // Adicione outras propriedades conforme necessário
+                    UserName = userNameClaim.Value // Certifique-se de que está retornando o valor correto do nome de usuário
                 });
             }
             catch (Exception ex)
             {
-                // Loga o erro e retorna uma resposta de erro do servidor
                 _logger.LogError("## Error while retrieving current user", ex);
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
+        }
+
+
+        private string GenerateJwtToken(IdentityUser user)
+        {
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id)
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+            var token = new JwtSecurityToken(
+                issuer: _configuration["Jwt:Issuer"],
+                audience: _configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.Now.AddMinutes(30),
+                signingCredentials: creds);
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

@@ -24,3 +24,16 @@ C:\Users\toshio.ws\Desktop\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\Blazor
 C:\Users\toshio.ws\Desktop\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\refint\BlazorShop.Models.dll
 C:\Users\toshio.ws\Desktop\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.pdb
 C:\Users\toshio.ws\Desktop\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\ref\BlazorShop.Models.dll
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\bin\Debug\net8.0\BlazorShop.Models.deps.json
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\bin\Debug\net8.0\BlazorShop.Models.dll
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\bin\Debug\net8.0\BlazorShop.Models.pdb
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.csproj.AssemblyReference.cache
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.AssemblyInfoInputs.cache
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.AssemblyInfo.cs
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.csproj.CoreCompileInputs.cache
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.sourcelink.json
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.dll
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\refint\BlazorShop.Models.dll
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.pdb
+C:\loja\lojavirtual\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\ref\BlazorShop.Models.dll

@@ -1,19 +1,39 @@
-﻿@implements IDisposable
-@inject ICarrinhoCompraService carrinhoCompraService
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ICarrinhoCompraService CarrinhoCompraService
+@inject NavigationManager Navigation
+@inject CustomAuthenticationStateProvider CustomAuthStateProvider
 
-<div class="top-row ps-3 navbar navbar-dark">
+<!-- Nome da loja com fundo azul escuro -->
+<div class="top-row ps-3 navbar navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">BlazorShop.Web</a>
+        <a class="navbar-brand text-white" href="">BlazorShop.Web</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
 </div>
 
+<!-- Seção de boas-vindas e logout com fundo azul escuro -->
+<div class="navbar navbar-dark bg-dark">
+    <div class="container-fluid d-flex align-items-center">
+        <AuthorizeView>
+            <Authorized>
+                <div class="navbar-text text-white me-3">Olá, @userName!</div>
+                <button class="btn btn-link text-white" @onclick="Logout">Logout</button>
+            </Authorized>
+            <NotAuthorized>
+                <!-- Se não estiver autenticado, não exibir nada aqui -->
+            </NotAuthorized>
+        </AuthorizeView>
+    </div>
+</div>
+
 <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
     <nav class="flex-column">
-        
-        <div class="nav-item px-3">
+        <!-- Mudando a estrutura para garantir que a saudação esteja acima do Home -->
+        <div class="nav-item px-3 mt-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
@@ -22,36 +42,86 @@
         <ProdutosCategoriaNavMenu />
 
         <div class="nav-item px-3 d-sm-none">
-            <NavLink class="nav-link" href="CarrinhoCompra">
+            <NavLink class="nav-link" href="carrinho-compra">
                 <span class="oi oi-cart" aria-hidden="true"></span>&nbsp;Carrinho(<b>@carrinhoCompraItemContador</b>)
             </NavLink>
         </div>
 
+        <!-- Links de Login e Logout abaixo do menu do carrinho -->
+        <div class="nav-item px-3 mt-auto">
+            <AuthorizeView>
+                <Authorized>
+                    <!-- Não repetindo aqui o Logout -->
+                </Authorized>
+                <NotAuthorized>
+                    <NavLink class="nav-link" href="login">
+                        <span class="oi oi-account-login" aria-hidden="true"></span> Login
+                    </NavLink>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
     </nav>
 </div>
 
 @code {
     private bool collapseNavMenu = true;
     private int carrinhoCompraItemContador = 0;
+    private string? userName;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        CarrinhoCompraService.OnCarrinhoCompraChanged += CarrinhoCompraChanged;
+        AuthenticationStateProvider.AuthenticationStateChanged += OnAuthenticationStateChanged;
+
+        // Inicializa o userName com o estado de autenticação atual
+        await UpdateUserName();
+    }
+
+    private async Task UpdateUserName()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity?.IsAuthenticated ?? false)
+        {
+            userName = user.FindFirst(ClaimTypes.Name)?.Value
+                       ?? user.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                       ?? user.Identity?.Name;
+        }
+        else
+        {
+            userName = null;
+        }
+    }
+
+    private async void OnAuthenticationStateChanged(Task<AuthenticationState> task)
+    {
+        await UpdateUserName();
+        await InvokeAsync(StateHasChanged);
+    }
 
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
     }
 
-    protected override void OnInitialized()
-    {
-        carrinhoCompraService.OnCarrinhoCompraChanged += CarrinhoCompraChanged;
-    }
-    protected void CarrinhoCompraChanged(int totalQuantidade)
+    private void CarrinhoCompraChanged(int totalQuantidade)
     {
         carrinhoCompraItemContador = totalQuantidade;
-        StateHasChanged();
+        InvokeAsync(StateHasChanged);
     }
-    void IDisposable.Dispose()
+
+    private async Task Logout()
     {
-        carrinhoCompraService.OnCarrinhoCompraChanged -= CarrinhoCompraChanged;
+        await CustomAuthStateProvider.MarkUserAsLoggedOut();
+        Navigation.NavigateTo("/login");
+    }
+
+    public void Dispose()
+    {
+        CarrinhoCompraService.OnCarrinhoCompraChanged -= CarrinhoCompraChanged;
+        AuthenticationStateProvider.AuthenticationStateChanged -= OnAuthenticationStateChanged;
     }
 }
