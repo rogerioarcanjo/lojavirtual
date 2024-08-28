@@ -1,16 +1,21 @@
-﻿@inject UsuarioService UsuarioService
-
-@if (isLoading)
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager Navigation
+@inject CustomAuthenticationStateProvider CustomAuthStateProvider
+@if (usuario != null)
 {
-    <ExibirSpinner />
-}
-else if (Usuario != null)
-{
-    <a href="Login" class="btn btn-info">
-        <i class="oi oi-person"></i>&nbsp;Usuário
-        <span class="badge bg-dark"></span>
-        <div>@Usuario.UserName</div>
-    </a>
+     <AuthorizeView>
+            <Authorized>
+                  <a href="Login" class="btn btn-info">
+                    <i class="oi oi-person"></i>Olá, @usuario?.FirstOrDefault()?.Value
+                    <span class="badge bg-dark"></span>
+                  </a>
+            </Authorized>
+            <NotAuthorized>
+                <!-- Se não estiver autenticado, não exibir nada aqui -->
+            </NotAuthorized>
+        </AuthorizeView>
 }
 else
 {
@@ -21,23 +26,44 @@ else
 }
 
 @code {
-    private bool isLoading = true; // Estado para indicar se os dados estão sendo carregados
-    public UserDto? Usuario { get; set; }
+    private IEnumerable<Claim>? usuario;
+    private string? userName;
+
 
     protected override async Task OnInitializedAsync()
     {
-        try
+        // Inicializa o userName com o estado de autenticação atual
+        await UpdateUserName();
+    }
+
+    private async Task UpdateUserName()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        usuario = user.Claims;
+
+        if (user.Identity?.IsAuthenticated ?? false)
         {
-            Usuario = await UsuarioService.GetUsuario();
+            
+            userName = user.FindFirst(ClaimTypes.Name)?.Value
+                       ?? user.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                       ?? user.Identity?.Name;
         }
-        catch (Exception ex)
+        else
         {
-            // Log de erro opcional, pode ser substituído por um serviço de notificação ou similar
-            Console.WriteLine($"Erro ao carregar o usuário: {ex.Message}");
+            userName = null;
         }
-        finally
-        {
-            isLoading = false; // Define isLoading como false independentemente do sucesso ou falha na operação
-        }
+    }
+
+    private async void OnAuthenticationStateChanged(Task<AuthenticationState> task)
+    {
+        await UpdateUserName();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task Logout()
+    {
+        await CustomAuthStateProvider.MarkUserAsLoggedOut();
+        Navigation.NavigateTo("/login");
     }
 }

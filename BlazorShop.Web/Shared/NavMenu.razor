@@ -20,7 +20,7 @@
     <div class="container-fluid d-flex align-items-center">
         <AuthorizeView>
             <Authorized>
-                <div class="navbar-text text-white me-3">Olá, @userName!</div>
+                <div class="navbar-text text-white me-3">Olá, @usuario?.FirstOrDefault()?.Value</div>
                 <button class="btn btn-link text-white" @onclick="Logout">Logout</button>
             </Authorized>
             <NotAuthorized>
@@ -67,6 +67,7 @@
     private bool collapseNavMenu = true;
     private int carrinhoCompraItemContador = 0;
     private string? userName;
+    private IEnumerable<Claim>? usuario;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
@@ -83,9 +84,11 @@
     {
         var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
         var user = authState.User;
+        usuario = user.Claims;
 
         if (user.Identity?.IsAuthenticated ?? false)
         {
+            
             userName = user.FindFirst(ClaimTypes.Name)?.Value
                        ?? user.FindFirst(ClaimTypes.NameIdentifier)?.Value
                        ?? user.Identity?.Name;

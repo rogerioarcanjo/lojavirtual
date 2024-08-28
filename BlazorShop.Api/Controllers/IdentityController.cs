@@ -84,7 +84,7 @@ namespace BlazorShop.Api.Controllers
 
             try
             {
-                var user = new IdentityUser { UserName = model.UserName };
+                var user = new IdentityUser { UserName = model.UserName, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
