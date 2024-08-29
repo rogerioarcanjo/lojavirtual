@@ -1,0 +1,73 @@
+﻿@page "/produto/edit/{ProdutoId:int}"
+@inject IProdutoService ProdutoService
+@inject NavigationManager Navigation
+
+<h3>@(ProdutoId == 0 ? "Criar Produto" : "Editar Produto")</h3>
+
+<EditForm Model="@produto" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <InputText id="nome" class="form-control" @bind-Value="produto.Nome" />
+    </div>
+
+    <div class="form-group">
+        <label for="descricao">Descrição</label>
+        <InputText id="descricao" class="form-control" @bind-Value="produto.Descricao" />
+    </div>
+
+    <div class="form-group">
+        <label for="preco">Preço</label>
+        <InputNumber id="preco" class="form-control" @bind-Value="produto.Preco" />
+    </div>
+
+    <div class="form-group">
+        <label for="quantidade">Quantidade</label>
+        <InputNumber id="quantidade" class="form-control" @bind-Value="produto.Quantidade" />
+    </div>
+
+    <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <select id="categoria" class="form-control" @bind="produto.CategoriaId">
+            @foreach (var categoria in categorias)
+            {
+                <option value="@categoria.Id">@categoria.Nome</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public int ProdutoId { get; set; }
+
+    private ProdutoDto produto = new ProdutoDto();
+    private IEnumerable<CategoriaDto> categorias = new List<CategoriaDto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        categorias = await ProdutoService.GetCategorias();
+        if (ProdutoId != 0)
+        {
+            produto = await ProdutoService.GetItem(ProdutoId);
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (ProdutoId == 0)
+        {
+            await ProdutoService.AddProduto(produto);
+        }
+        else
+        {
+            await ProdutoService.UpdateProduto(produto);
+        }
+
+        Navigation.NavigateTo("/produtos");
+    }
+}

@@ -111,4 +111,42 @@ public class ProdutoService : IProdutoService
             throw;
         }
     }
+
+    public async Task AddProduto(ProdutoDto produto)
+    {
+        try
+        {
+            var response = await _httpClient.PostAsJsonAsync("api/produtos", produto);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Status Code: {response.StatusCode} - {message}");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Erro ao adicionar produto");
+            throw;
+        }
+    }
+
+    public async Task UpdateProduto(ProdutoDto produto)
+    {
+        try
+        {
+            var response = await _httpClient.PutAsJsonAsync($"api/produtos/{produto.Id}", produto);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var message = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Status Code: {response.StatusCode} - {message}");
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Erro ao atualizar produto");
+            throw;
+        }
+    }
 }

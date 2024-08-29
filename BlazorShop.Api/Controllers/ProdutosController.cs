@@ -97,4 +97,36 @@ public class ProdutosController : ControllerBase
                                        "Erro ao acessar o banco de dados");
         }
     }
+
+    [HttpPut("{id:int}")]
+    public async Task<ActionResult<ProdutoDto>> UpdateItem(int id, ProdutoDto produtoDto)
+    {
+        try
+        {
+            if (id != produtoDto.Id)
+            {
+                return BadRequest("ID do produto não coincide");
+            }
+
+            var produtoAtualizar = await _produtoRepository.GetItem(id);
+
+            if (produtoAtualizar is null)
+            {
+                return NotFound("Produto não encontrado");
+            }
+
+            var produto = produtoDto.ConverterDtoParaProduto();
+
+            var produtoAtualizado = await _produtoRepository.UpdateItem(produto);
+
+            var produtoAtualizadoDto = produtoAtualizado.ConverterProdutoParaDto();
+
+            return Ok(produtoAtualizadoDto);
+        }
+        catch (Exception)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError,
+                              "Erro ao atualizar produto");
+        }
+    }
 }

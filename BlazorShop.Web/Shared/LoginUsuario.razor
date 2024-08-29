@@ -3,26 +3,39 @@
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager Navigation
 @inject CustomAuthenticationStateProvider CustomAuthStateProvider
+
 @if (usuario != null)
 {
      <AuthorizeView>
             <Authorized>
-                  <a href="Login" class="btn btn-info">
+                <a href="#" class="btn btn-info" style="cursor: default; pointer-events: none; text-decoration: none; color: inherit;">
                     <i class="oi oi-person"></i>Olá, @usuario?.FirstOrDefault()?.Value
-                    <span class="badge bg-dark"></span>
                   </a>
+                   <span>
+                       <a @onclick="Logout">sair</a> 
+                        </span>
             </Authorized>
             <NotAuthorized>
                 <!-- Se não estiver autenticado, não exibir nada aqui -->
             </NotAuthorized>
         </AuthorizeView>
+
+        <AuthorizeView>
+                <Authorized>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="Login" class="btn btn-info">
+                        <i class="oi oi-person"></i>&nbsp;Faça o login
+                        <span class="badge bg-dark"></span>
+                    </a>
+                </NotAuthorized>
+            </AuthorizeView>
 }
 else
 {
-    <a href="Login" class="btn btn-info">
-        <i class="oi oi-person"></i>&nbsp;Faça o login
-        <span class="badge bg-dark"></span>
-    </a>
+
+    
+    
 }
 
 @code {

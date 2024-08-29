@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ28ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/toshio/OneDrive/Área de Trabalho/lojavirtual/BlazorShop.Web/Pages/CrudProdutosListar.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3J1ZFByb2R1dG9zTGlzdGFyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/toshio/OneDrive/Área de Trabalho/lojavirtual/BlazorShop.Web/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +44,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/toshio/OneDrive/Área de Trabalho/lojavirtual/BlazorShop.Web/Pages/ProdutoDetalhes.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b0RldGFsaGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toshio/OneDrive/Área de Trabalho/lojavirtual/BlazorShop.Web/Pages/ProdutoEdit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0b0VkaXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/toshio/OneDrive/Área de Trabalho/lojavirtual/BlazorShop.Web/Pages/ProdutosPorCategoria.razor]

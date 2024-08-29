@@ -91,4 +91,18 @@ public static class MappingDtos
             UserName = usuario.NomeUsuario
         };
     }
+
+    public static Produto ConverterDtoParaProduto(this ProdutoDto produtoDto)
+    {
+        return new Produto
+        {
+            Id = produtoDto.Id,
+            Nome = produtoDto.Nome,
+            Descricao = produtoDto.Descricao,
+            ImagemUrl = produtoDto.ImagemUrl,
+            Preco = produtoDto.Preco,
+            Quantidade = produtoDto.Quantidade,
+            CategoriaId = produtoDto.CategoriaId
+        };
+    }
 }
