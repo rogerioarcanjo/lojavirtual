@@ -44,4 +44,11 @@ public class ProdutoRepository : IProdutoRepository
         var categorias = await _context.Categorias.ToListAsync();
         return categorias;
     }
+
+    public async Task<Produto> UpdateItem(Produto produto)
+    {
+        var result = _context.Produtos.Update(produto);
+        await _context.SaveChangesAsync();
+        return result.Entity;
+    }
 }

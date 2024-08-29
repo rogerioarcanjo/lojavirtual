@@ -1,0 +1,40 @@
+﻿@page "/crud"
+@inject IProdutoService ProdutoService
+
+<h3>Produtos</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in produtos)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+                <td>@produto.Descricao</td>
+                <td>@produto.Preco</td>
+                <td>@produto.Quantidade</td>
+                <td>
+                    <a href="/produto/edit/@produto.Id">Editar</a> |
+                    <a href="/produto/delete/@produto.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<ProdutoDto> produtos = new List<ProdutoDto>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        produtos = await ProdutoService.GetItens();
+    }
+}

@@ -1,22 +1,74 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\loja\\lojavirtual\\lojavirtual\\",
+  "WorkspaceRootPath": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.web\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.api\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|solutionrelative:blazorshop.api\\repositories\\produtorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|solutionrelative:blazorshop.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\services\\produtoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\pages\\produtoedit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\pages\\produtoedit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\pages\\catalogo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\pages\\catalogo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.api\\repositories\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|solutionrelative:blazorshop.api\\repositories\\iprodutorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\pages\\produtosporcategoria.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\pages\\produtosporcategoria.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\pages\\crudprodutoslistar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\pages\\crudprodutoslistar.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\shared\\loginusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\shared\\loginusuario.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\shared\\exibirspinner.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\shared\\exibirspinner.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.web\\authentication\\jwtparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\authentication\\jwtparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.web\\authentication\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|solutionrelative:blazorshop.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\authentication\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\authentication\\customauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|c:\\loja\\lojavirtual\\lojavirtual\\blazorshop.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FE8DD133-F0B9-4E94-8701-24757E8330F2}|BlazorShop.Api\\BlazorShop.Api.csproj|solutionrelative:blazorshop.api\\controllers\\identitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|c:\\users\\toshio\\onedrive\\\u00E1rea de trabalho\\lojavirtual\\blazorshop.web\\authentication\\jwtparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EFAB425-D1FD-4824-AACA-9EE6088F8D26}|BlazorShop.Web\\BlazorShop.Web.csproj|solutionrelative:blazorshop.web\\authentication\\jwtparser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,55 +86,225 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProdutoEdit.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\ProdutoEdit.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Pages\\ProdutoEdit.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\ProdutoEdit.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Pages\\ProdutoEdit.razor",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAEMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-29T00:10:01.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProdutoService.cs",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Services\\ProdutoService.cs",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Services\\ProdutoService.cs",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Services\\ProdutoService.cs",
+              "RelativeToolTip": "BlazorShop.Web\\Services\\ProdutoService.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T23:48:14.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IdentityController.cs",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "RelativeDocumentMoniker": "BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "RelativeToolTip": "BlazorShop.Api\\Controllers\\IdentityController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAFYAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T19:23:05.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Pages\\Register.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\Register.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Pages\\Register.razor",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-27T22:59:01.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\Repositories\\ProdutoRepository.cs",
+              "RelativeDocumentMoniker": "BlazorShop.Api\\Repositories\\ProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\Repositories\\ProdutoRepository.cs",
+              "RelativeToolTip": "BlazorShop.Api\\Repositories\\ProdutoRepository.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAADQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T00:22:52.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Catalogo.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\Catalogo.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Pages\\Catalogo.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\Catalogo.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Pages\\Catalogo.razor",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-29T00:23:19.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IProdutoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\Repositories\\IProdutoRepository.cs",
+              "RelativeDocumentMoniker": "BlazorShop.Api\\Repositories\\IProdutoRepository.cs",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\Repositories\\IProdutoRepository.cs",
+              "RelativeToolTip": "BlazorShop.Api\\Repositories\\IProdutoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T00:34:04.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProdutosPorCategoria.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\ProdutosPorCategoria.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Pages\\ProdutosPorCategoria.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\ProdutosPorCategoria.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Pages\\ProdutosPorCategoria.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T23:57:36.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CrudProdutosListar.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\CrudProdutosListar.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Pages\\CrudProdutosListar.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\CrudProdutosListar.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Pages\\CrudProdutosListar.razor",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T23:53:43.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ExibirSpinner.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\ExibirSpinner.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Shared\\ExibirSpinner.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\ExibirSpinner.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Shared\\ExibirSpinner.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T01:32:27.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginUsuario.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\LoginUsuario.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Shared\\LoginUsuario.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\LoginUsuario.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Shared\\LoginUsuario.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T01:29:03.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Shared\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Shared\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-28T01:26:02.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Shared\\NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "BlazorShop.Web\\Shared\\NavMenu.razor",
-              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Shared\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Shared\\NavMenu.razor",
               "RelativeToolTip": "BlazorShop.Web\\Shared\\NavMenu.razor",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAuwGUAAAArAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-27T19:43:04.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "BlazorShop.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Api\\appsettings.json",
+              "RelativeToolTip": "BlazorShop.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-27T22:34:21.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "BlazorShop.Web\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Pages\\Login.razor",
+              "RelativeToolTip": "BlazorShop.Web\\Pages\\Login.razor",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-27T22:58:49.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "JwtParser.cs",
-              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\JwtParser.cs",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Authentication\\JwtParser.cs",
               "RelativeDocumentMoniker": "BlazorShop.Web\\Authentication\\JwtParser.cs",
-              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\JwtParser.cs",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Authentication\\JwtParser.cs",
               "RelativeToolTip": "BlazorShop.Web\\Authentication\\JwtParser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA0AAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T19:24:12.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T19:24:12.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "CustomAuthenticationStateProvider.cs",
-              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
+              "DocumentMoniker": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
               "RelativeDocumentMoniker": "BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
-              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
+              "ToolTip": "C:\\Users\\toshio\\OneDrive\\\u00C1rea de Trabalho\\lojavirtual\\BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
               "RelativeToolTip": "BlazorShop.Web\\Authentication\\CustomAuthenticationStateProvider.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T19:23:42.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IdentityController.cs",
-              "DocumentMoniker": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Api\\Controllers\\IdentityController.cs",
-              "RelativeDocumentMoniker": "BlazorShop.Api\\Controllers\\IdentityController.cs",
-              "ToolTip": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Api\\Controllers\\IdentityController.cs",
-              "RelativeToolTip": "BlazorShop.Api\\Controllers\\IdentityController.cs",
-              "ViewState": "AQIAAJQAAAAAAAAAAAAAAK4AAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-27T19:23:05.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T19:23:42.939Z"
             }
           ]
         }

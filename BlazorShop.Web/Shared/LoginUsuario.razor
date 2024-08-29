@@ -1,43 +1,82 @@
-﻿@inject UsuarioService UsuarioService
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager Navigation
+@inject CustomAuthenticationStateProvider CustomAuthStateProvider
 
-@if (isLoading)
+@if (usuario != null)
 {
-    <ExibirSpinner />
-}
-else if (Usuario != null)
-{
-    <a href="Login" class="btn btn-info">
-        <i class="oi oi-person"></i>&nbsp;Usuário
-        <span class="badge bg-dark"></span>
-        <div>@Usuario.UserName</div>
-    </a>
+     <AuthorizeView>
+            <Authorized>
+                <a href="#" class="btn btn-info" style="cursor: default; pointer-events: none; text-decoration: none; color: inherit;">
+                    <i class="oi oi-person"></i>Olá, @usuario?.FirstOrDefault()?.Value
+                  </a>
+                   <span>
+                       <a @onclick="Logout">sair</a> 
+                        </span>
+            </Authorized>
+            <NotAuthorized>
+                <!-- Se não estiver autenticado, não exibir nada aqui -->
+            </NotAuthorized>
+        </AuthorizeView>
+
+        <AuthorizeView>
+                <Authorized>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="Login" class="btn btn-info">
+                        <i class="oi oi-person"></i>&nbsp;Faça o login
+                        <span class="badge bg-dark"></span>
+                    </a>
+                </NotAuthorized>
+            </AuthorizeView>
 }
 else
 {
-    <a href="Login" class="btn btn-info">
-        <i class="oi oi-person"></i>&nbsp;Faça o login
-        <span class="badge bg-dark"></span>
-    </a>
+
+    
+    
 }
 
 @code {
-    private bool isLoading = true; // Estado para indicar se os dados estão sendo carregados
-    public UserDto? Usuario { get; set; }
+    private IEnumerable<Claim>? usuario;
+    private string? userName;
+
 
     protected override async Task OnInitializedAsync()
     {
-        try
+        // Inicializa o userName com o estado de autenticação atual
+        await UpdateUserName();
+    }
+
+    private async Task UpdateUserName()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        usuario = user.Claims;
+
+        if (user.Identity?.IsAuthenticated ?? false)
         {
-            Usuario = await UsuarioService.GetUsuario();
+            
+            userName = user.FindFirst(ClaimTypes.Name)?.Value
+                       ?? user.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                       ?? user.Identity?.Name;
         }
-        catch (Exception ex)
+        else
         {
-            // Log de erro opcional, pode ser substituído por um serviço de notificação ou similar
-            Console.WriteLine($"Erro ao carregar o usuário: {ex.Message}");
+            userName = null;
         }
-        finally
-        {
-            isLoading = false; // Define isLoading como false independentemente do sucesso ou falha na operação
-        }
+    }
+
+    private async void OnAuthenticationStateChanged(Task<AuthenticationState> task)
+    {
+        await UpdateUserName();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task Logout()
+    {
+        await CustomAuthStateProvider.MarkUserAsLoggedOut();
+        Navigation.NavigateTo("/login");
     }
 }

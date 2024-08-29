@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj": {}
+    "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj": {}
   },
   "projects": {
-    "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
+    "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj",
+        "projectUniqueName": "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj",
         "projectName": "BlazorShop.Models",
-        "projectPath": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj",
-        "packagesPath": "C:\\Users\\Arcanjo\\.nuget\\packages\\",
-        "outputPath": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Models\\obj\\",
+        "projectPath": "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj",
+        "packagesPath": "C:\\Users\\toshio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Arcanjo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\toshio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,25 +67,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj": {
+    "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj",
+        "projectUniqueName": "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj",
         "projectName": "BlazorShop.Web",
-        "projectPath": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj",
-        "packagesPath": "C:\\Users\\Arcanjo\\.nuget\\packages\\",
-        "outputPath": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Web\\obj\\",
+        "projectPath": "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Web\\BlazorShop.Web.csproj",
+        "packagesPath": "C:\\Users\\toshio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Web\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Arcanjo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\toshio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +96,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
-                "projectPath": "C:\\loja\\lojavirtual\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj"
+              "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj": {
+                "projectPath": "C:\\Users\\toshio\\OneDrive\\Área de Trabalho\\lojavirtual\\BlazorShop.Models\\BlazorShop.Models.csproj"
               }
             }
           }
@@ -153,13 +145,13 @@
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             },
             "Microsoft.NET.Sdk.WebAssembly.Pack": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.4, )",
+              "version": "[8.0.8, )",
               "autoReferenced": true
             },
             "System.IdentityModel.Tokens.Jwt": {
@@ -181,7 +173,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[8.0.4, 8.0.4]"
+              "version": "[8.0.8, 8.0.8]"
             }
           ],
           "frameworkReferences": {
@@ -189,7 +181,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

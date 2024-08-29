@@ -9,4 +9,8 @@ public interface IProdutoService
 
     Task<IEnumerable<CategoriaDto>> GetCategorias();
     Task<IEnumerable<ProdutoDto>> GetItensPorCategoria(int categoriaId);
+
+    Task AddProduto(ProdutoDto produto);
+
+    Task UpdateProduto(ProdutoDto produto);
 }

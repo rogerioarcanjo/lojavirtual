@@ -16,6 +16,11 @@
     </div>
 
     <div>
+        <label for="registerEmail">Email</label>
+        <InputText id="registerEmail" @bind-Value="registerModel.Email" />
+    </div>
+
+    <div>
         <label for="registerPassword">Password</label>
         <InputText id="registerPassword" @bind-Value="registerModel.Password" type="password" />
     </div>
@@ -85,6 +90,8 @@
         [Required]
         [Compare("Password", ErrorMessage = "Passwords do not match.")]
         public string ConfirmPassword { get; set; }
+
+        public string Email { get; set; }
     }
 
     public class ErrorResponse

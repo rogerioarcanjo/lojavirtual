@@ -19,5 +19,7 @@ namespace BlazorShop.Models.DTOs
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "As senhas não coincidem.")]
         public string ConfirmPassword { get; set; }
+
+        public string Email { get; set; }
     }
 }
