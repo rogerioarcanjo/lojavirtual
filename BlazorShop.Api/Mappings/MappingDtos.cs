@@ -1,108 +1,113 @@
 ﻿using BlazorShop.Api.Entities;
 using BlazorShop.Models.DTOs;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace BlazorShop.Api.Mappings;
-
-public static class MappingDtos
+namespace BlazorShop.Api.Mappings
 {
-    public static IEnumerable<CategoriaDto> ConverterCategoriasParaDto(
-                                            this IEnumerable<Categoria> categorias)
+    public static class MappingDtos
     {
-        return (from categoria in categorias
-                select new CategoriaDto
-                {
-                    Id = categoria.Id,
-                    Nome = categoria.Nome,
-                    IconCSS = categoria.IconCSS
-                }).ToList();
-    }
-    public static IEnumerable<ProdutoDto> ConverterProdutosParaDto(
-                                         this IEnumerable<Produto> produtos)
-    {
-        return (from produto in produtos
-                select new ProdutoDto
-                {
-                    Id = produto.Id,
-                    Nome = produto.Nome,
-                    Descricao = produto.Descricao,
-                    ImagemUrl = produto.ImagemUrl,
-                    Preco = produto.Preco,
-                    Quantidade = produto.Quantidade,
-                    CategoriaId = produto.Categoria.Id,
-                    CategoriaNome = produto.Categoria.Nome
-                }).ToList();
-    }
-    public static ProdutoDto ConverterProdutoParaDto(this Produto produto)
-    {
-        return new ProdutoDto
+        public static IEnumerable<CategoriaDto> ConverterCategoriasParaDto(
+            this IEnumerable<Categoria> categorias)
         {
-            Id = produto.Id,
-            Nome = produto.Nome,
-            Descricao = produto.Descricao,
-            ImagemUrl = produto.ImagemUrl,
-            Preco = produto.Preco,
-            Quantidade = produto.Quantidade,
-            CategoriaId = produto.Categoria.Id,
-            CategoriaNome = produto.Categoria.Nome
-        };
-    }
+            return (from categoria in categorias
+                    select new CategoriaDto
+                    {
+                        Id = categoria.Id,
+                        Nome = categoria.Nome,
+                        IconCSS = categoria.IconCSS
+                    }).ToList();
+        }
 
-    public static IEnumerable<CarrinhoItemDto> ConverterCarrinhoItensParaDto(
-        this IEnumerable<CarrinhoItem> carrinhoItens,IEnumerable<Produto> produtos)
-    {
-        return (from carrinhoItem in carrinhoItens
-                join produto in produtos
-                on carrinhoItem.ProdutoId equals produto.Id
-                select new CarrinhoItemDto
-                {
-                    Id = carrinhoItem.Id,
-                    ProdutoId = carrinhoItem.ProdutoId,
-                    ProdutoNome = produto.Nome,
-                    ProdutoDescricao = produto.Descricao,
-                    ProdutoImagemURL = produto.ImagemUrl,
-                    Preco = produto.Preco,
-                    CarrinhoId = carrinhoItem.CarrinhoId,
-                    Quantidade = carrinhoItem.Quantidade,
-                    PrecoTotal = produto.Preco * carrinhoItem.Quantidade
-                }).ToList();
-    }
-
-    public static CarrinhoItemDto ConverterCarrinhoItemParaDto(this CarrinhoItem carrinhoItem,
-                                               Produto produto)
-    {
-        return new CarrinhoItemDto
+        public static IEnumerable<ProdutoDto> ConverterProdutosParaDto(
+            this IEnumerable<Produto> produtos)
         {
-            Id = carrinhoItem.Id,
-            ProdutoId = carrinhoItem.ProdutoId,
-            ProdutoNome = produto.Nome,
-            ProdutoDescricao = produto.Descricao,
-            ProdutoImagemURL = produto.ImagemUrl,
-            Preco = produto.Preco,
-            CarrinhoId = carrinhoItem.CarrinhoId,
-            Quantidade = carrinhoItem.Quantidade,
-            PrecoTotal = produto.Preco * carrinhoItem.Quantidade
-        };
-    }
+            return (from produto in produtos
+                    select new ProdutoDto
+                    {
+                        Id = produto.Id,
+                        Nome = produto.Nome,
+                        Descricao = produto.Descricao,
+                        ImagemUrl = produto.ImagemUrl,
+                        Preco = produto.Preco,
+                        Quantidade = produto.Quantidade,
+                        CategoriaId = produto.Categoria?.Id ?? 0,
+                        CategoriaNome = produto.Categoria?.Nome ?? "Desconhecido"
+                    }).ToList();
+        }
 
-    public static UserDto ConverterUserParaDto(this Usuario usuario)
-    {
-        return new UserDto
+        public static ProdutoDto ConverterProdutoParaDto(this Produto produto)
         {
-            UserName = usuario.NomeUsuario
-        };
-    }
+            return new ProdutoDto
+            {
+                Id = produto.Id,
+                Nome = produto.Nome,
+                Descricao = produto.Descricao,
+                ImagemUrl = produto.ImagemUrl,
+                Preco = produto.Preco,
+                Quantidade = produto.Quantidade,
+                CategoriaId = produto.Categoria?.Id ?? 0,
+                CategoriaNome = produto.Categoria?.Nome ?? "Desconhecido"
+            };
+        }
 
-    public static Produto ConverterDtoParaProduto(this ProdutoDto produtoDto)
-    {
-        return new Produto
+        public static IEnumerable<CarrinhoItemDto> ConverterCarrinhoItensParaDto(
+            this IEnumerable<CarrinhoItem> carrinhoItens, IEnumerable<Produto> produtos)
         {
-            Id = produtoDto.Id,
-            Nome = produtoDto.Nome,
-            Descricao = produtoDto.Descricao,
-            ImagemUrl = produtoDto.ImagemUrl,
-            Preco = produtoDto.Preco,
-            Quantidade = produtoDto.Quantidade,
-            CategoriaId = produtoDto.CategoriaId
-        };
+            return (from carrinhoItem in carrinhoItens
+                    join produto in produtos
+                    on carrinhoItem.ProdutoId equals produto.Id
+                    select new CarrinhoItemDto
+                    {
+                        Id = carrinhoItem.Id,
+                        ProdutoId = carrinhoItem.ProdutoId,
+                        ProdutoNome = produto.Nome,
+                        ProdutoDescricao = produto.Descricao,
+                        ProdutoImagemURL = produto.ImagemUrl,
+                        Preco = produto.Preco,
+                        CarrinhoId = carrinhoItem.CarrinhoId,
+                        Quantidade = carrinhoItem.Quantidade,
+                        PrecoTotal = produto.Preco * carrinhoItem.Quantidade
+                    }).ToList();
+        }
+
+        public static CarrinhoItemDto ConverterCarrinhoItemParaDto(
+            this CarrinhoItem carrinhoItem, Produto produto)
+        {
+            return new CarrinhoItemDto
+            {
+                Id = carrinhoItem.Id,
+                ProdutoId = carrinhoItem.ProdutoId,
+                ProdutoNome = produto.Nome,
+                ProdutoDescricao = produto.Descricao,
+                ProdutoImagemURL = produto.ImagemUrl,
+                Preco = produto.Preco,
+                CarrinhoId = carrinhoItem.CarrinhoId,
+                Quantidade = carrinhoItem.Quantidade,
+                PrecoTotal = produto.Preco * carrinhoItem.Quantidade
+            };
+        }
+
+        public static UserDto ConverterUserParaDto(this Usuario usuario)
+        {
+            return new UserDto
+            {
+                UserName = usuario.NomeUsuario
+            };
+        }
+
+        public static Produto ConverterDtoParaProduto(this ProdutoDto produtoDto)
+        {
+            return new Produto
+            {
+                Id = produtoDto.Id,
+                Nome = produtoDto.Nome,
+                Descricao = produtoDto.Descricao,
+                ImagemUrl = produtoDto.ImagemUrl,
+                Preco = produtoDto.Preco,
+                Quantidade = produtoDto.Quantidade,
+                CategoriaId = produtoDto.CategoriaId
+            };
+        }
     }
 }

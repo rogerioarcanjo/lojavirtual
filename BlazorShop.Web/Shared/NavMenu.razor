@@ -1,7 +1,6 @@
 ﻿@inject ICarrinhoCompraService CarrinhoCompraService
 @inject NavigationManager Navigation
 
-
 <!-- Nome da loja com fundo azul escuro -->
 <div class="top-row ps-3 navbar navbar-dark bg-dark">
     <div class="container-fluid">
@@ -29,23 +28,29 @@
             </NavLink>
         </div>
 
+        <!-- Novo item de menu para Gerenciamento de Produto -->
+        <div class="nav-item px-3 d-none d-sm-block">
+            <NavLink class="nav-link" href="produto/gerenciamento">
+                <span class="oi oi-cog" aria-hidden="true"></span>&nbsp;Gerenciar Produto
+            </NavLink>
+        </div>
     </nav>
 </div>
 
 @code {
     private bool collapseNavMenu = true;
     private int carrinhoCompraItemContador = 0;
-    private string? userName;
-
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
     protected override async Task OnInitializedAsync()
     {
         CarrinhoCompraService.OnCarrinhoCompraChanged += CarrinhoCompraChanged;
-        // Inicializa o userName com o estado de autenticação atual
-    }
 
+        // Atualiza o contador de itens do carrinho no carregamento inicial, se necessário.
+        // Se a função de carregamento inicial não estiver disponível, remova esta linha.
+        // O contador de itens é atualizado somente via eventos.
+    }
 
     private void ToggleNavMenu()
     {
@@ -57,7 +62,6 @@
         carrinhoCompraItemContador = totalQuantidade;
         InvokeAsync(StateHasChanged);
     }
-
 
     public void Dispose()
     {

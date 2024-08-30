@@ -1,0 +1,36 @@
+﻿@page "/produto/gerenciamento"
+@inject NavigationManager Navigation
+
+<h3>Gerenciamento de Produtos</h3>
+
+<!-- Contêiner de botões com alinhamento usando Flexbox -->
+<div class="d-flex align-items-center mb-3">
+    <!-- Botão para criar um novo produto -->
+    <button class="btn btn-success me-2" @onclick="NavegarParaCriarProduto">Criar Produto</button>
+
+    <!-- Botão para editar/excluir produtos -->
+    <button class="btn btn-success me-2" @onclick="NavegarParaCrud">Excluir/Editar Produto</button>
+
+</div>
+
+@code {
+    private void NavegarParaCriarProduto()
+    {
+        Navigation.NavigateTo("/produto/edit/0");
+    }
+
+    private void NavegarParaCrud()
+    {
+        Navigation.NavigateTo("/crud");
+    }
+
+    private void NavegarParaEditarProduto(int produtoId)
+    {
+        Navigation.NavigateTo($"/produto/edit/{produtoId}");
+    }
+
+    private void NavegarParaExcluirProduto(int produtoId)
+    {
+        Navigation.NavigateTo($"/produto/excluir/{produtoId}");
+    }
+}

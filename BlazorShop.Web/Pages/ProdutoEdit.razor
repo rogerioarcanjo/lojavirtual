@@ -31,11 +31,17 @@
     <div class="form-group">
         <label for="categoria">Categoria</label>
         <select id="categoria" class="form-control" @bind="produto.CategoriaId">
+            <option value="">Selecione uma categoria</option>
             @foreach (var categoria in categorias)
             {
                 <option value="@categoria.Id">@categoria.Nome</option>
             }
         </select>
+    </div>
+
+    <div class="form-group">
+        <label for="imagem">Imagem</label>
+        <InputFile id="imagem" class="form-control" OnChange="HandleImageUpload" />
     </div>
 
     <button type="submit" class="btn btn-primary">Salvar</button>
@@ -47,27 +53,74 @@
 
     private ProdutoDto produto = new ProdutoDto();
     private IEnumerable<CategoriaDto> categorias = new List<CategoriaDto>();
+    private IBrowserFile uploadedFile;
 
     protected override async Task OnInitializedAsync()
     {
         categorias = await ProdutoService.GetCategorias();
         if (ProdutoId != 0)
         {
-            produto = await ProdutoService.GetItem(ProdutoId);
+            produto = await ProdutoService.GetItem(ProdutoId) ?? new ProdutoDto();
+        }
+    }
+
+    private async Task HandleImageUpload(InputFileChangeEventArgs e)
+    {
+        uploadedFile = e.File;
+        if (uploadedFile != null)
+        {
+            // Implementar a lógica para fazer o upload da imagem.
         }
     }
 
     private async Task HandleValidSubmit()
     {
-        if (ProdutoId == 0)
+        try
         {
-            await ProdutoService.AddProduto(produto);
+            if (uploadedFile != null)
+            {
+                // Supondo que você tenha um método para fazer o upload da imagem no servidor
+                var categoria = categorias.FirstOrDefault(c => c.Id == produto.CategoriaId)?.Nome;
+                var imagePath = await UploadImageAsync(uploadedFile, categoria);
+                produto.ImagemUrl = imagePath;
+            }
+
+            if (ProdutoId == 0)
+            {
+                await ProdutoService.AddProduto(produto);
+            }
+            else
+            {
+                await ProdutoService.UpdateProduto(produto);
+            }
+
+            Navigation.NavigateTo("/produtos");
         }
-        else
+        catch (Exception ex)
         {
-            await ProdutoService.UpdateProduto(produto);
+            // Exibir uma mensagem de erro para o usuário ou logar o erro
+            Console.WriteLine($"Erro ao salvar produto: {ex.Message}");
+            // Você pode adicionar uma mensagem de erro no UI se desejar
+        }
+    }
+
+    private async Task<string> UploadImageAsync(IBrowserFile file, string categoria)
+    {
+        // Verifica se o diretório para salvar a imagem existe
+        var folderPath = Path.Combine("wwwroot", "imagens", categoria);
+        Directory.CreateDirectory(folderPath);
+
+        var fileName = file.Name;
+        var filePath = Path.Combine(folderPath, fileName);
+        
+        // Salva a imagem no servidor
+        using (var stream = file.OpenReadStream())
+        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        {
+            await stream.CopyToAsync(fileStream);
         }
 
-        Navigation.NavigateTo("/produtos");
+        // Retorna o caminho relativo para a imagem
+        return $"/imagens/{categoria}/{fileName}";
     }
 }

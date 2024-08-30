@@ -1,5 +1,6 @@
 ﻿@page "/crud"
 @inject IProdutoService ProdutoService
+@inject NavigationManager Navigation
 
 <h3>Produtos</h3>
 
@@ -22,8 +23,8 @@
                 <td>@produto.Preco</td>
                 <td>@produto.Quantidade</td>
                 <td>
-                    <a href="/produto/edit/@produto.Id">Editar</a> |
-                    <a href="/produto/delete/@produto.Id">Excluir</a>
+                    <button class="btn btn-primary" @onclick="() => NavegarParaEditarProduto(produto.Id)">Editar</button>
+                    <button class="btn btn-danger" @onclick="() => ExcluirProduto(produto.Id)">Excluir</button>
                 </td>
             </tr>
         }
@@ -35,6 +36,38 @@
 
     protected override async Task OnInitializedAsync()
     {
-        produtos = await ProdutoService.GetItens();
+        await CarregarProdutos();
+    }
+
+    private async Task CarregarProdutos()
+    {
+        try
+        {
+            produtos = await ProdutoService.GetItens();
+        }
+        catch (Exception ex)
+        {
+            // Lidar com o erro adequadamente (exibir mensagem, log, etc.)
+            Console.WriteLine($"Erro ao carregar produtos: {ex.Message}");
+        }
+    }
+
+    private void NavegarParaEditarProduto(int produtoId)
+    {
+        Navigation.NavigateTo($"/produto/edit/{produtoId}");
+    }
+
+    private async Task ExcluirProduto(int produtoId)
+    {
+        try
+        {
+            await ProdutoService.DeleteProduto(produtoId);
+            await CarregarProdutos(); // Atualiza a lista após a exclusão
+        }
+        catch (Exception ex)
+        {
+            // Lidar com o erro adequadamente (exibir mensagem, log, etc.)
+            Console.WriteLine($"Erro ao excluir produto: {ex.Message}");
+        }
     }
 }

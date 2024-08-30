@@ -4859,3 +4859,18 @@ C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Web\obj\Debug\
 C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\refint\BlazorShop.Web.dll
 C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\BlazorShop.Web.pdb
 C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\ref\BlazorShop.Web.dll
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\FluentAssertions.wasm
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Configuration.ConfigurationManager.wasm
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.ProtectedData.wasm
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.ProtectedData.wasm.gz
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Configuration.ConfigurationManager.wasm.gz
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\FluentAssertions.wasm.gz
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\FluentAssertions.dll
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\webcil\FluentAssertions.wasm
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\webcil\System.Configuration.ConfigurationManager.wasm
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\webcil\System.Security.Cryptography.ProtectedData.wasm
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\nv79slmp0s.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\9yxqxv3ca6.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\949znnxnk3.gz

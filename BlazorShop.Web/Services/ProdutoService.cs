@@ -2,151 +2,170 @@
 using System.Net;
 using System.Net.Http.Json;
 
-namespace BlazorShop.Web.Services;
-
-public class ProdutoService : IProdutoService
+namespace BlazorShop.Web.Services
 {
-    public HttpClient _httpClient;
-    public ILogger<ProdutoService> _logger;
-
-    public ProdutoService(HttpClient httpClient,
-        ILogger<ProdutoService> logger)
+    public class ProdutoService : IProdutoService
     {
-        _httpClient = httpClient;
-        _logger = logger;
-    }
+        private readonly HttpClient _httpClient;
+        private readonly ILogger<ProdutoService> _logger;
 
-    public async Task<IEnumerable<ProdutoDto>> GetItens()
-    {
-        try
+        public ProdutoService(HttpClient httpClient, ILogger<ProdutoService> logger)
         {
-            var produtosDto = await _httpClient.
-                             GetFromJsonAsync<IEnumerable<ProdutoDto>>("api/produtos");
-            return produtosDto;
+            _httpClient = httpClient;
+            _logger = logger;
         }
-        catch (Exception)
-        {
-            _logger.LogError("Erro ao acessar produtos : api/produtos ");
-            throw;
-        }
-    }
 
-    public async Task<ProdutoDto> GetItem(int id)
-    {
-        try
+        public async Task<IEnumerable<ProdutoDto>> GetItens()
         {
-            var response = await _httpClient.GetAsync($"api/produtos/{id}");
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                if (response.StatusCode == HttpStatusCode.NoContent)
+                var produtosDto = await _httpClient.GetFromJsonAsync<IEnumerable<ProdutoDto>>("api/produtos");
+                return produtosDto;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao acessar produtos: api/produtos");
+                throw;
+            }
+        }
+
+        public async Task<ProdutoDto> GetItem(int id)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"api/produtos/{id}");
+
+                if (response.IsSuccessStatusCode)
                 {
-                    return default(ProdutoDto);
+                    if (response.StatusCode == HttpStatusCode.NoContent)
+                    {
+                        return default(ProdutoDto);
+                    }
+                    return await response.Content.ReadFromJsonAsync<ProdutoDto>();
                 }
-                return await response.Content.ReadFromJsonAsync<ProdutoDto>();
-            }
-            else
-            {
-                var message = await response.Content.ReadAsStringAsync();
-                _logger.LogError($"Erro a obter produto pelo id= {id} - {message}");
-                throw new Exception($"Status Code : {response.StatusCode} - {message}");
-            }
-        }
-        catch (Exception)
-        {
-            _logger.LogError($"Erro a obter produto pelo id={id}");
-            throw;
-        }
-    }
-
-    public async Task<IEnumerable<CategoriaDto>> GetCategorias()
-    {
-        try
-        {
-            var response = await _httpClient.GetAsync("api/Produtos/GetCategorias");
-            if (response.IsSuccessStatusCode)
-            {
-                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                else
                 {
-                    return Enumerable.Empty<CategoriaDto>();
+                    var message = await response.Content.ReadAsStringAsync();
+                    _logger.LogError($"Erro ao obter produto pelo id={id} - {message}");
+                    throw new Exception($"Status Code: {response.StatusCode} - {message}");
                 }
-                return await response.Content.ReadFromJsonAsync<IEnumerable<CategoriaDto>>();
             }
-            else
+            catch (Exception ex)
             {
-                var message = await response.Content.ReadAsStringAsync();
-                throw new Exception($"Http Status Code - {response.StatusCode} Message - {message}");
+                _logger.LogError(ex, $"Erro ao obter produto pelo id={id}");
+                throw;
             }
         }
-        catch (Exception)
-        {
-            //log exception
-            throw;
-        }
-    }
 
-    public async Task<IEnumerable<ProdutoDto>> GetItensPorCategoria(int categoriaId)
-    {
-        try
+        public async Task<IEnumerable<ProdutoDto>> GetItensPorCategoria(int categoriaId)
         {
-            var response = await _httpClient.GetAsync($"api/Produtos/{categoriaId}/GetItensPorCategoria");
-            
-            if (response.IsSuccessStatusCode)
+            try
             {
-                if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
+                var response = await _httpClient.GetAsync($"api/produtos/{categoriaId}/GetItensPorCategoria");
+
+                if (response.IsSuccessStatusCode)
                 {
-                    return Enumerable.Empty<ProdutoDto>();
+                    if (response.StatusCode == HttpStatusCode.NoContent)
+                    {
+                        return Enumerable.Empty<ProdutoDto>();
+                    }
+                    return await response.Content.ReadFromJsonAsync<IEnumerable<ProdutoDto>>();
                 }
-                return await response.Content.ReadFromJsonAsync<IEnumerable<ProdutoDto>>();
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception($"Status Code: {response.StatusCode} - {message}");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                var message = await response.Content.ReadAsStringAsync();
-                throw new Exception($"Http Status Code - {response.StatusCode} Message - {message}");
+                _logger.LogError(ex, "Erro ao obter itens por categoria");
+                throw;
             }
         }
-        catch (Exception)
-        {
-            //log exception
-            throw;
-        }
-    }
 
-    public async Task AddProduto(ProdutoDto produto)
-    {
-        try
+        public async Task<IEnumerable<CategoriaDto>> GetCategorias()
         {
-            var response = await _httpClient.PostAsJsonAsync("api/produtos", produto);
-
-            if (!response.IsSuccessStatusCode)
+            try
             {
-                var message = await response.Content.ReadAsStringAsync();
-                throw new Exception($"Status Code: {response.StatusCode} - {message}");
+                var response = await _httpClient.GetAsync("api/produtos/GetCategorias");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    if (response.StatusCode == HttpStatusCode.NoContent)
+                    {
+                        return Enumerable.Empty<CategoriaDto>();
+                    }
+                    return await response.Content.ReadFromJsonAsync<IEnumerable<CategoriaDto>>();
+                }
+                else
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception($"Status Code: {response.StatusCode} - {message}");
+                }
             }
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Erro ao adicionar produto");
-            throw;
-        }
-    }
-
-    public async Task UpdateProduto(ProdutoDto produto)
-    {
-        try
-        {
-            var response = await _httpClient.PutAsJsonAsync($"api/produtos/{produto.Id}", produto);
-
-            if (!response.IsSuccessStatusCode)
+            catch (Exception ex)
             {
-                var message = await response.Content.ReadAsStringAsync();
-                throw new Exception($"Status Code: {response.StatusCode} - {message}");
+                _logger.LogError(ex, "Erro ao obter categorias");
+                throw;
             }
         }
-        catch (Exception ex)
+
+        public async Task AddProduto(ProdutoDto produto)
         {
-            _logger.LogError(ex, "Erro ao atualizar produto");
-            throw;
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("api/produtos", produto);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception($"Status Code: {response.StatusCode} - {message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao adicionar produto");
+                throw;
+            }
+        }
+
+        public async Task UpdateProduto(ProdutoDto produto)
+        {
+            try
+            {
+                var response = await _httpClient.PutAsJsonAsync($"api/produtos/{produto.Id}", produto);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception($"Status Code: {response.StatusCode} - {message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao atualizar produto");
+                throw;
+            }
+        }
+
+        public async Task DeleteProduto(int id)
+        {
+            try
+            {
+                var response = await _httpClient.DeleteAsync($"api/produtos/{id}");
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var message = await response.Content.ReadAsStringAsync();
+                    throw new Exception($"Status Code: {response.StatusCode} - {message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Erro ao excluir produto");
+                throw;
+            }
         }
     }
 }

@@ -13,4 +13,6 @@ public interface IProdutoService
     Task AddProduto(ProdutoDto produto);
 
     Task UpdateProduto(ProdutoDto produto);
+
+    Task DeleteProduto(int id);
 }

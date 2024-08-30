@@ -11,4 +11,10 @@ public interface IProdutoRepository
     Task<IEnumerable<Categoria>> GetCategorias();
 
     Task<Produto> UpdateItem(Produto produto);
+
+    Task DeleteItem(int id);
+
+   Task<Produto> AddItem(Produto produto); // Adicionado método para criar um novo produto
+
+
 }
