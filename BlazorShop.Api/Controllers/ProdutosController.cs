@@ -99,36 +99,48 @@ public class ProdutosController : ControllerBase
     }
 
     [HttpPut("{id:int}")]
-    public async Task<ActionResult<ProdutoDto>> UpdateItem(int id, ProdutoDto produtoDto)
+    public async Task<ActionResult<ProdutoDto>> UpdateItem(int id, [FromBody] ProdutoDto produtoDto)
     {
         try
         {
+            // Verifica se o ID do produto no DTO coincide com o ID na URL
             if (id != produtoDto.Id)
             {
-                return BadRequest("ID do produto não coincide");
+                return BadRequest("ID do produto na URL não coincide com o ID no corpo da requisição");
             }
 
-            var produtoAtualizar = await _produtoRepository.GetItem(id);
+            // Verifica se o produto existe no repositório
+            var produtoExistente = await _produtoRepository.GetItem(id);
 
-            if (produtoAtualizar is null)
+            if (produtoExistente == null)
             {
                 return NotFound("Produto não encontrado");
             }
 
-            var produto = produtoDto.ConverterDtoParaProduto();
+            // Atualiza as propriedades do produto existente com as informações do DTO
+            produtoExistente.Nome = produtoDto.Nome;
+            produtoExistente.Descricao = produtoDto.Descricao;
+            produtoExistente.ImagemUrl = produtoDto.ImagemUrl;
+            produtoExistente.Preco = produtoDto.Preco;
+            produtoExistente.Quantidade = produtoDto.Quantidade;
+            produtoExistente.CategoriaId = produtoDto.CategoriaId;
 
-            var produtoAtualizado = await _produtoRepository.UpdateItem(produto);
+            // Atualiza o produto no repositório
+            var produtoAtualizado = await _produtoRepository.UpdateItem(produtoExistente);
 
+            // Converte o produto atualizado para DTO
             var produtoAtualizadoDto = produtoAtualizado.ConverterProdutoParaDto();
 
             return Ok(produtoAtualizadoDto);
         }
-        catch (Exception)
+        catch (Exception ex)
         {
+            // Log a exception or use a more specific error message
             return StatusCode(StatusCodes.Status500InternalServerError,
-                              "Erro ao atualizar produto");
+                              "Erro ao atualizar o produto: " + ex.Message);
         }
     }
+
 
     // Novo método para excluir um produto
     [HttpDelete("{id:int}")]

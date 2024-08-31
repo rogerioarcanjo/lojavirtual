@@ -20,21 +20,21 @@
     <div class="mb-3 row">
         <label for="registerEmail" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
-         <InputText id="registerEmail" @bind-Value="registerModel.Email" />
+            <InputText id="registerEmail" @bind-Value="registerModel.Email" />
         </div>
     </div>
 
     <div class="mb-3 row">
         <label for="registerPassword" class="col-sm-2 col-form-label">Senha</label>
         <div class="col-sm-10">
-          <InputText id="registerPassword" @bind-Value="registerModel.Password" type="password" />
+            <InputText id="registerPassword" @bind-Value="registerModel.Password" type="password" />
         </div>
     </div>
 
     <div class="mb-3 row">
         <label for="confirmPassword" class="col-sm-2 col-form-label">Confirme a Senha</label>
         <div class="col-sm-10">
-           <InputText id="confirmPassword" @bind-Value="registerModel.ConfirmPassword" type="password" />
+            <InputText id="confirmPassword" @bind-Value="registerModel.ConfirmPassword" type="password" />
         </div>
     </div>
 
@@ -60,7 +60,6 @@
     {
         try
         {
-            // Verifica se as senhas coincidem
             if (registerModel.Password != registerModel.ConfirmPassword)
             {
                 registerErrorMessage = "Passwords do not match.";
@@ -71,19 +70,18 @@
 
             if (response.IsSuccessStatusCode)
             {
-                registerErrorMessage = "Registration successful. You can now log in.";
-                // Redireciona para a página de login após o registro bem-sucedido
+                registerErrorMessage = null;
                 Navigation.NavigateTo("login");
             }
             else
             {
-                var errorResponse = await response.Content.ReadFromJsonAsync<ErrorResponse>();
-                registerErrorMessage = errorResponse?.Message ?? "Registration failed. Please check your information.";
+                var errorResponseString = await response.Content.ReadAsStringAsync();
+                registerErrorMessage = $"Registration failed: {errorResponseString}";
             }
         }
         catch (Exception ex)
         {
-            registerErrorMessage = "An error occurred during registration. Please try again.";
+            registerErrorMessage = $"An error occurred during registration: {ex.Message}";
         }
     }
 
@@ -93,17 +91,16 @@
         public string UserName { get; set; }
 
         [Required]
+        [EmailAddress(ErrorMessage = "Endereço de e-mail inválido.")]
+        public string Email { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         [Required]
-        [Compare("Password", ErrorMessage = "Passwords do not match.")]
+        [Compare("Password", ErrorMessage = "As senhas não coincidem.")]
+        [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
-
-        public string Email { get; set; }
-    }
-
-    public class ErrorResponse
-    {
-        public string Message { get; set; }
     }
 }

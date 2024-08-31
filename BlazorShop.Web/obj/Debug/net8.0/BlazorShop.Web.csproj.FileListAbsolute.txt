@@ -7,9 +7,7 @@ C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\BlazorSho
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\BlazorShop.Web.wasm
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map
-C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.4.fbhcqwkufg.js
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm
-C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.4.e5zh6dy67w.js
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat
@@ -277,7 +275,6 @@ C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\Microsoft
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encodings.Web.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Net.Quic.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.IO.MemoryMappedFiles.wasm.gz
-C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.4.e5zh6dy67w.js.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Private.Xml.Linq.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Security.Principal.Windows.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.Json.wasm.gz
@@ -287,7 +284,6 @@ C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Nu
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Text.Json.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlSerializer.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Threading.Tasks.Dataflow.wasm.gz
-C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.4.fbhcqwkufg.js.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Loader.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.Annotations.wasm.gz
 C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\System.Data.wasm.gz
@@ -835,7 +831,6 @@ C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\scopedcss\Shared\NavMenu.raz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\scopedcss\Shared\ProdutosCategoriaNavMenu.razor.rz.scp.css
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\scopedcss\bundle\BlazorShop.Web.styles.css
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\scopedcss\projectbundle\BlazorShop.Web.bundle.scp.css
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\p3xsz3lxn5.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\ssbi9l846h.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\53g0yzh8xb.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\x2j661ei33.gz
@@ -1028,15 +1023,6 @@ C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\pc1wo6gl9b.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\hck1g5ps2n.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\qm98tkwmko.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\z5vuzlcve1.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\2wgmmvj454.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\depzw6ef4e.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\fbhcqwkufg.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\ievbo0bfuj.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\e5zh6dy67w.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\9p6fetjm57.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\n5kf9wbhwe.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\kb53pedgum.gz
-C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\p6iidpuylx.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\s2g9hgdlye.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\wqwwhg0wlg.gz
 C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\miog4wha9w.gz
@@ -6093,3 +6079,17 @@ C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Web\obj\D
 C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\refint\BlazorShop.Web.dll
 C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\BlazorShop.Web.pdb
 C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\ref\BlazorShop.Web.dll
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.3.9nm7bajy7e.js
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.3.d2kvxvq3vc.js
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.3.9nm7bajy7e.js.gz
+C:\loja\lojavirtual\BlazorShop.Web\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.3.d2kvxvq3vc.js.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\jzszhjt9sl.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\i92xn63rpo.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\0enqgz1v45.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\9nm7bajy7e.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\cw94iepz82.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\d2kvxvq3vc.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\51ysl5o3uf.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\slmlkzssub.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\gngxvh6plu.gz
+C:\loja\lojavirtual\BlazorShop.Web\obj\Debug\net8.0\compressed\59ip1fnhyx.gz
