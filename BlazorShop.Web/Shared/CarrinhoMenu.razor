@@ -1,7 +1,7 @@
 ﻿@implements IDisposable
 @inject ICarrinhoCompraService carrinhoCompraService
 
-<a href="CarrinhoCompra" class="btn btn-info">
+<a href="CarrinhoCompra" class="btn custom-button">
     <i class="oi oi-cart"></i>&nbsp;Carrinho
     <span class="badge bg-dark">@carrinhoCompraItemContador</span>
 </a>
@@ -25,3 +25,16 @@
         carrinhoCompraService.OnCarrinhoCompraChanged -= CarrinhoCompraChanged;
     }
 }
+
+<style>
+    .custom-button {
+        background-color: #6f42c1; /* Cor de fundo personalizada */
+        color: #fff; /* Cor do texto */
+        border: none; /* Remove a borda padrão */
+    }
+
+        .custom-button:hover {
+            background-color: #31027f; /* Cor de fundo ao passar o mouse */
+            color: #fff; /* Cor do texto */
+        }
+</style>
