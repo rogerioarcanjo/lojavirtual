@@ -34,13 +34,14 @@ Nota: A chave JWT (Jwt:Key) deve ter pelo menos 32 caracteres.
 2. Migrações do Banco de Dados
 Para configurar o banco de dados, gere as migrações necessárias para AppDbContext e AppDbContextIdentity:
 
-bash
-Copiar código
 dotnet ef migrations add InitialMigration --context AppDbContext
+
 dotnet ef database update --context AppDbContext
 
 dotnet ef migrations add IdentityMigration --context AppDbContextIdentity
+
 dotnet ef database update --context AppDbContextIdentity
+
 Importante: Certifique-se de que o banco de dados esteja estruturado conforme a imagem abaixo.
 
 ![image](https://github.com/user-attachments/assets/e514cc88-7a39-484b-b4e5-f2399fb85f97)
