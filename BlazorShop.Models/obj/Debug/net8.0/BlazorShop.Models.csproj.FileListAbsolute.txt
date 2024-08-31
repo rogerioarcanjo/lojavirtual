@@ -50,3 +50,16 @@ C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Models\obj\Deb
 C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\refint\BlazorShop.Models.dll
 C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.pdb
 C:\Users\toshio\OneDrive\Área de Trabalho\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\ref\BlazorShop.Models.dll
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\bin\Debug\net8.0\BlazorShop.Models.deps.json
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\bin\Debug\net8.0\BlazorShop.Models.dll
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\bin\Debug\net8.0\BlazorShop.Models.pdb
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.csproj.AssemblyReference.cache
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.AssemblyInfoInputs.cache
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.AssemblyInfo.cs
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.csproj.CoreCompileInputs.cache
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.sourcelink.json
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.dll
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\refint\BlazorShop.Models.dll
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\BlazorShop.Models.pdb
+C:\Users\toshio\OneDrive\Área de Trabalho\loja\lojavirtual\BlazorShop.Models\obj\Debug\net8.0\ref\BlazorShop.Models.dll

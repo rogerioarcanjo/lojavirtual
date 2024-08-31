@@ -8,12 +8,14 @@
 {
      <AuthorizeView>
             <Authorized>
-                <a href="#" class="btn btn-info" style="cursor: default; pointer-events: none; text-decoration: none; color: inherit;">
+            <div class="dropdown">
+                <button class="btn custom-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="oi oi-person"></i>Olá, @usuario?.FirstOrDefault()?.Value
-                  </a>
-                   <span>
-                       <a @onclick="Logout">sair</a> 
-                        </span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li style="cursor: pointer"><a @onclick="Logout">sair</a> </li>
+                </ul>
+            </div>
             </Authorized>
             <NotAuthorized>
                 <!-- Se não estiver autenticado, não exibir nada aqui -->
@@ -24,7 +26,7 @@
                 <Authorized>
                 </Authorized>
                 <NotAuthorized>
-                    <a href="Login" class="btn btn-info">
+            <a href="Login" class="btn custom-button">
                         <i class="oi oi-person"></i>&nbsp;Faça o login
                         <span class="badge bg-dark"></span>
                     </a>
@@ -80,3 +82,16 @@ else
         Navigation.NavigateTo("/login");
     }
 }
+
+<style>
+    .custom-button {
+        background-color: #6f42c1; /* Cor de fundo personalizada */
+        color: #fff; /* Cor do texto */
+        border: none; /* Remove a borda padrão */
+    }
+
+        .custom-button:hover {
+            background-color: #31027f; /* Cor de fundo ao passar o mouse */
+            color: #fff; /* Cor do texto */
+        }
+</style>
