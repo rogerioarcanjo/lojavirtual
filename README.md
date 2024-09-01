@@ -5,27 +5,7 @@ Bem-vindo ao BlazorShop! Este é um projeto de loja virtual desenvolvido utiliza
 1. ⚙️ Configuração do appsettings.json
 Para iniciar o projeto, configure o arquivo appsettings.json no projeto BlazorShop.Api com as informações do seu banco de dados:
 
-json
-Copy code
-{
-  "ConnectionStrings": {
-    //"DefaultConnection": "Data Source=localhost,1433;Initial Catalog=ShopDBTeste;User ID=sa;Password=SenhaPadrão123!;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-    "DefaultConnection": "Data Source=Desk-Arcanjo;Initial Catalog=ShopDBTeste;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
-  },
-  "Jwt": {
-    "Key": "YourSuperSecretKeyWith32CharactersOrMore", // Certifique-se de que a chave tenha pelo menos 32 caracteres
-    "Issuer": "YourAppNameHere",
-    "Audience": "YourAudienceHere"
-  },
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "AllowedHosts": "*"
 
-  
 Nota: A chave JWT (Jwt:Key) deve ter pelo menos 32 caracteres.
 
 2. 🗄️ Migrações do Banco de Dados
@@ -37,34 +17,53 @@ Para configurar o banco de dados, gere as migrações necessárias para AppDbCon
 bash
 Copy code
 dotnet ef migrations add InitialMigration --context AppDbContext
+
 dotnet ef database update --context AppDbContext
+
+
 dotnet ef migrations add IdentityMigration --context AppDbContextIdentity
+
 dotnet ef database update --context AppDbContextIdentity
+
+
 Importante: Certifique-se de que o banco de dados esteja estruturado conforme a imagem abaixo.
 
 
 
 3. 🌐 Inicialização dos Projetos API e Web
+   
 Como o projeto utiliza Blazor WebAssembly, é necessário garantir que tanto a API quanto o projeto Web estejam rodando simultaneamente. Para isso:
 
 Na solução do Visual Studio, vá até as propriedades da solução.
 Configure para que BlazorShop.Api e BlazorShop.Web sejam iniciados juntos.
 
 
-🔧 Funcionalidades em Andamento
+![image](https://github.com/user-attachments/assets/27f6808b-2c4a-40b3-a547-d40d2aefed64)
+
+
+
+4. 🔧 Funcionalidades em Andamento
 💳 Pagamento: Integração com sistemas de pagamento.
+
 🔒 Gerenciamento de Segurança: Implementação de segurança no gerenciamento de produtos.
+
 📦 Controle de Estoque: Validação e atualização do estoque durante o processo de pagamento.
+
 📄 Licença
 Este projeto é licenciado sob os termos da licença MIT.
+
 
 📫 Contribuindo
 Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga os passos abaixo:
 
 Faça um fork do repositório.
+
 Crie um branch para a sua feature (git checkout -b feature/MinhaFeature).
+
 Commit suas alterações (git commit -m 'Adiciona MinhaFeature').
+
 Push para o branch (git push origin feature/MinhaFeature).
+
 Abra um Pull Request.
 
 🖼️ Screenshots
